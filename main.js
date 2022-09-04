@@ -37,13 +37,13 @@ const loadCategory = () => {
 
 const displayCategory = (categories) => {
 
-    // loadSpineer(true);
+
 
 
     const categoryMainDiv = document.getElementById('category-main-div');
 
     categories.forEach(category => {
-      //  console.log(category)
+   
         const creatDiv = document.createElement('div');
         creatDiv.classList.add('items');
         creatDiv.innerHTML = `
@@ -204,7 +204,6 @@ const DisplayCategoryDetails = (details,CategoryName) => {
 
                         <button onclick="viewCardDetails('${item._id}')"  class="btn btn-primary btn-sm " data-bs-toggle="modal" data-bs-target="#exampleModal">View Details</button>
                     </div>
-                    
 
                 </div>
                 </div>
@@ -213,7 +212,7 @@ const DisplayCategoryDetails = (details,CategoryName) => {
         
         `;
         itemDEtailsMain.appendChild(cardItem)
-      //  console.log(item);
+
        
 
    }
