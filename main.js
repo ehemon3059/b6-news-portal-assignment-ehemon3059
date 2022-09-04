@@ -63,8 +63,6 @@ const displayCategory = (categories) => {
 
 
 
-
-
 const loadBlogDetails = async (id,CategoryName) => {
 
     const itemCountShow = document.getElementById('itemCount');
@@ -81,20 +79,13 @@ const loadBlogDetails = async (id,CategoryName) => {
     const url = `https://openapi.programming-hero.com/api/news/category/${id}`;
     const res = await fetch(url);
     const data = await res.json();
-   
-
-    console.log(url);
-
-
 
      DisplayCategoryDetails(data.data,CategoryName)
 
-        
  
 }
 
 //.........Load category End ............
-
 
 
 //.......default card items  show start......
@@ -133,8 +124,7 @@ const defaultDisplayCategory = (datas) =>{
                     <p class="card-text">${data.details.length > 600 ? data.details.slice(0,599)+"..." : data.details}</p> 
                     <div id="card-under-details" class="mt-5">
 
-                        <p class="card-text"><span><img src="${data.author.img}" style="width:50px ;  border-radius: 50%;"> </span>&nbsp;  ${data.author.name ? data.author.name : '<span style="color:red;"> &nbsp; &nbsp;Author Name Not Found</span>'} </p>
-                            
+                        <p class="card-text"><span><img src="${data.author.img}" style="width:50px ;  border-radius: 50%;"> </span>&nbsp;  ${data.author.name ? data.author.name : '<span style="color:red;"> &nbsp; &nbsp;Author Name Not Found</span>'} </p>   
                        
                         <p> <i class="fa fa-eye" aria-hidden="true">  </i>  ${data.total_view ? data.total_view : '<span style="color:red;">No View Found</span>'}  </p>
 
@@ -177,9 +167,6 @@ const DisplayCategoryDetails = (details,CategoryName) => {
 
 
    for( const item of details){
-
-
-
       
         const cardItem = document.createElement('div');
         cardItem.classList.add('cardItems')
@@ -213,38 +200,24 @@ const DisplayCategoryDetails = (details,CategoryName) => {
         `;
         itemDEtailsMain.appendChild(cardItem)
 
-       
-
    }
-
 
   
 }
 
 
 
-
-
 const viewCardDetails = async id => {
 
-
-
-
- 
     const url = `https://openapi.programming-hero.com/api/news/${id}`;
     const res = await fetch(url);
     const data = await res.json();
 
-    DisplayCardDetails(data.data)
-
-      
+    DisplayCardDetails(data.data)   
 
 }
 
 const DisplayCardDetails = (cards) => {
-
-
-    
 
     const cardDetail = document.getElementById('cardTitle');
 
