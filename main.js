@@ -1,6 +1,87 @@
 
 
+//.........Load category start ............
+const loadCategory = () => {
+    const url = `https://openapi.programming-hero.com/api/news/categories`
 
+    fetch(url)
+    .then(res => res.json())
+    .then(data =>  displayCategory(data.data.news_category))
+
+    .catch(error => console.log(error));
+   
+}
+
+
+
+
+const displayCategory = (categories) => {
+
+    // loadSpineer(true);
+
+
+    const categoryMainDiv = document.getElementById('category-main-div');
+
+    categories.forEach(category => {
+      //  console.log(category)
+        const creatDiv = document.createElement('div');
+        creatDiv.classList.add('items');
+        creatDiv.innerHTML = `
+        
+            <p onclick="loadBlogDetails('${category.category_id }','${category.category_name}')" >${category.category_name}</p>
+       
+
+        `;
+
+    categoryMainDiv.appendChild(creatDiv)
+
+       // console.log(creatDiv);
+
+    
+   });
+}
+
+
+//    const loadSpineer = (isLoading) => {
+//         const load = document.getElementById('loading-spiner');
+//         if(isLoading){
+//             load.classList.remove('d-none')
+//         }else{
+//             load.classList.add('d-none')
+//         }
+//     }
+
+
+
+const loadBlogDetails = async (id,CategoryName) => {
+
+    const itemCountShow = document.getElementById('itemCount');
+    itemCountShow.classList.remove('d-none');
+
+   
+    const questinBlg = document.getElementById('questionBlog');
+    questinBlg.classList.add('d-none');
+
+     const newsBlog = document.getElementById('category-section-maindiv');
+    newsBlog.classList.remove('d-none');
+
+
+    const url = `https://openapi.programming-hero.com/api/news/category/${id}`;
+    const res = await fetch(url);
+    const data = await res.json();
+   
+
+    console.log(url);
+
+
+
+     DisplayCategoryDetails(data.data,CategoryName)
+
+        
+ 
+}
+
+//.........Load category End ............
 
 
 
