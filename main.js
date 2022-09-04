@@ -1,3 +1,23 @@
+//.........Blog button to switch blog and news start...........
+const displaBlog = () =>{
+    const newsBlog = document.getElementById('category-section-maindiv');
+    newsBlog.classList.add('d-none');
+    const questionBlog = document.getElementById('questionBlog');
+    questionBlog.classList.remove('d-none');
+
+
+    const itemCountShow = document.getElementById('itemCount');
+    itemCountShow.classList.add('d-none');
+
+}
+
+const displaNewsBlog = () =>{
+    const questionBlg = document.getElementById('questionBlog');
+    questionBlg.classList.add('d-none');
+     const newsBlg = document.getElementById('category-section-maindiv');
+    newsBlg.classList.remove('d-none');
+}
+//.............Blog button to switch blog and news End...................
 
 
 //.........Load category start ............
