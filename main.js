@@ -55,21 +55,13 @@ const displayCategory = (categories) => {
 
     categoryMainDiv.appendChild(creatDiv)
 
-       // console.log(creatDiv);
+    
 
     
    });
 }
 
 
-//    const loadSpineer = (isLoading) => {
-//         const load = document.getElementById('loading-spiner');
-//         if(isLoading){
-//             load.classList.remove('d-none')
-//         }else{
-//             load.classList.add('d-none')
-//         }
-//     }
 
 
 
