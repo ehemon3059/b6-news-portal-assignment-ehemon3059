@@ -158,9 +158,12 @@ DefaultLoad();
 
 //.......default card items  show End......
 
+
+
+
 //..........Onclick  details card show start...........
 const DisplayCategoryDetails = (details,CategoryName) => {
-   // console.log(details,CategoryName)
+
    
     const itemName = document.getElementById('item-Name');
    const itemNo = document.getElementById('item-count');
@@ -175,7 +178,7 @@ const DisplayCategoryDetails = (details,CategoryName) => {
 
    for( const item of details){
 
-      //  const totalNews = details.length;
+
 
       
         const cardItem = document.createElement('div');
@@ -246,8 +249,6 @@ const DisplayCardDetails = (cards) => {
     
 
     const cardDetail = document.getElementById('cardTitle');
-    //const cardDetailName = `https://openapi.programming-hero.com/api/news/category/${cards[0].category_id}`;
-  //  console.log(cardDetailName);
 
     cardDetail.innerHTML = `<h4>Blog Details</h4>`;
     const modalDetailsBody = document.getElementById('cardBody');
