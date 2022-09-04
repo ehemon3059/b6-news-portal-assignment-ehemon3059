@@ -218,7 +218,6 @@ const DisplayCategoryDetails = (details,CategoryName) => {
 
    }
 
-    //    loadSpineer(false);
 
   
 }
