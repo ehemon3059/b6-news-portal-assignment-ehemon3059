@@ -1,0 +1,82 @@
+ @import url('https://fonts.googleapis.com/css2?family=Lobster&family=Poppins:wght@400;700&family=Righteous&family=Roboto:wght@300;900&display=swap');
+
+ #logo-font {
+     font-family: 'Righteous', cursive;
+     font-size: 30px;
+     color: #06659B;
+ }
+
+ #category-main-div {
+     display: flex;
+     flex-direction: row;
+     justify-content: space-between;
+     font-size: 20px;
+     font-weight: 700;
+     cursor: pointer;
+
+ }
+
+ ul {
+     list-style: none;
+ }
+
+ li {
+     font-size: 20px;
+     font-weight: 700;
+     cursor: pointer;
+
+ }
+
+ li:hover {
+     color: #007373bc;
+ }
+
+ #card-under-details {
+     display: flex;
+     flex-direction: row;
+     justify-content: space-around;
+     align-items: center;
+ }
+
+ #varContLet {
+     display: flex;
+     flex-direction: row;
+ }
+
+ #arrowRegular {
+     display: flex;
+     flex-direction: row;
+     justify-content: space-around;
+ }
+
+ #mapForFilter {
+     display: flex;
+     flex-direction: row;
+     justify-content: space-around;
+ }
+
+ @media screen and (max-width: 576px) {
+     #varContLet {
+         display: flex;
+         flex-direction: column;
+     }
+
+     #arrowRegular {
+         display: flex;
+         flex-direction: column;
+     }
+
+     #mapForFilter {
+         display: flex;
+         flex-direction: column;
+
+     }
+
+     #category-main-div {
+         display: flex;
+         flex-direction: column;
+         align-items: center;
+         cursor: pointer;
+
+     }
+ }
